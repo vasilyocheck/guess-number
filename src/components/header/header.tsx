@@ -1,7 +1,3 @@
-import { useAppSelector } from '@/app/store'
-import { makeNumReadable } from '@/utils/makeNumReadable'
-import { getRangeEnd, getRangeStart } from '@/utils/selectors'
-
 import s from './header.module.scss'
 
 export const Header = () => {

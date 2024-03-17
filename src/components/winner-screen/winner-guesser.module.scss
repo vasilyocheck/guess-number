@@ -5,6 +5,9 @@
 
   height: 100%;
 
-  color: #48d748;
   text-align: center;
+
+  & div {
+    color: #48d748;
+  }
 }

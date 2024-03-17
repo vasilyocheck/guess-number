@@ -2,22 +2,15 @@ import { useAppDispatch, useAppSelector } from '@/app/store'
 import { Button } from '@/components/common/button/button'
 import { Status, guesserActions } from '@/features/guesser/guesser-slice'
 import { makeNumReadable } from '@/utils/makeNumReadable'
+import { getAttemptsNum, getCurrentNum } from '@/utils/selectors'
 
 import s from './guesser.module.scss'
 
 export const Guesser = () => {
   const dispatch = useAppDispatch()
-  const currentNum = useAppSelector(state => state.guesser.currentNum)
-  const attemptNum = useAppSelector(state => state.guesser.attemptNum)
+  const currentNum = useAppSelector(getCurrentNum)
+  const attemptNum = useAppSelector(getAttemptsNum)
   const numToCheck = makeNumReadable(currentNum)
-
-  /* Check zone */
-  const start = useAppSelector(state => state.guesser.rangeStart)
-  const end = useAppSelector(state => state.guesser.rangeEnd)
-
-  console.log(`start: ${start}`)
-  console.log(`end: ${end}`)
-  /* Check zone */
 
   const handleBtnClick = (status: Status) => {
     dispatch(guesserActions.guessNumber({ status }))

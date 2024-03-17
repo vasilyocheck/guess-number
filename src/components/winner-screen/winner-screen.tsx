@@ -1,12 +1,13 @@
 import { useAppDispatch, useAppSelector } from '@/app/store'
 import { Button } from '@/components/common/button/button'
 import { guesserActions } from '@/features/guesser/guesser-slice'
+import { getAttemptsNum } from '@/utils/selectors'
 
 import s from './winner-guesser.module.scss'
 
 export const WinnerScreen = () => {
   const dispatch = useAppDispatch()
-  const numAttempts = useAppSelector(state => state.guesser.attemptNum)
+  const numAttempts = useAppSelector(getAttemptsNum)
 
   const handleClick = () => {
     dispatch(guesserActions.resetGame())

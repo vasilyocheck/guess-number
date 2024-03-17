@@ -23,9 +23,17 @@ export const Guesser = () => {
         Это число <span className={s.number}>{numToCheck}</span>?
       </div>
       <div className={s.buttons}>
-        <Button btnText={'НЕТ, ЧИСЛО МЕНЬШЕ'} onBtnClick={() => handleBtnClick('less')} />
+        <Button
+          btnText={'НЕТ, ЧИСЛО МЕНЬШЕ'}
+          disabled={currentNum === 1}
+          onBtnClick={() => handleBtnClick('less')}
+        />
         <Button btnText={'ДА, УГАДАЛ'} onBtnClick={() => handleBtnClick('win')} />
-        <Button btnText={'НЕТ, ЧИСЛО БОЛЬШЕ'} onBtnClick={() => handleBtnClick('more')} />
+        <Button
+          btnText={'НЕТ, ЧИСЛО БОЛЬШЕ'}
+          disabled={currentNum === 1000000}
+          onBtnClick={() => handleBtnClick('more')}
+        />
       </div>
     </div>
   )

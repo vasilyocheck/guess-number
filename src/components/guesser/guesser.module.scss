@@ -1,0 +1,17 @@
+.guesser {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.number {
+  font-size: 26px;
+  text-decoration: underline;
+}

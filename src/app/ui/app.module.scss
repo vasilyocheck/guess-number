@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px;
+  color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(217 210 210 / 61%);
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 360px;
+  height: 90%;
+  min-height: 567px;
+  padding: 10px;
+
+  background-color: blueviolet;
+  border-radius: 20px;
+}
+
+.gameScreen {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 300px;
+  padding: 10px;
+
+  border: 1px solid rgb(217 210 210 / 61%);
+  border-radius: 10px;
+}

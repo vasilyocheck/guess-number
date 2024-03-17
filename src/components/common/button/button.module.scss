@@ -1,0 +1,18 @@
+.btn {
+  cursor: pointer;
+
+  padding: 10px;
+
+  font-weight: bold;
+  color: black;
+
+  border-radius: 5px;
+
+  &:hover {
+    background-color: yellow;
+  }
+
+  &:active {
+    background-color: lightgreen;
+  }
+}

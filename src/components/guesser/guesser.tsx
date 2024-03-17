@@ -16,6 +16,8 @@ export const Guesser = () => {
     dispatch(guesserActions.guessNumber({ status }))
   }
 
+  const disabled = currentNum === 1 || currentNum === 1000000
+
   return (
     <div className={s.guesser}>
       <div>Попытка №{attemptNum}</div>
@@ -25,13 +27,13 @@ export const Guesser = () => {
       <div className={s.buttons}>
         <Button
           btnText={'НЕТ, ЧИСЛО МЕНЬШЕ'}
-          disabled={currentNum === 1}
+          disabled={disabled}
           onBtnClick={() => handleBtnClick('less')}
         />
         <Button btnText={'ДА, УГАДАЛ'} onBtnClick={() => handleBtnClick('win')} />
         <Button
           btnText={'НЕТ, ЧИСЛО БОЛЬШЕ'}
-          disabled={currentNum === 1000000}
+          disabled={disabled}
           onBtnClick={() => handleBtnClick('more')}
         />
       </div>
